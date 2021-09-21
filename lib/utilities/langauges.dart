@@ -8,7 +8,6 @@ class Languages {
     "language": "اللغة",
     "skip": "تخطي",
     "here": "هنا",
-
     "welcomeUser": "اهلا بيك بتطبيق مول العراق",
     "shoppingWelcome":
         " التطبيق الي من خلاله تكدر تشتري افضل المنتجات من ارقى الماركات وبارخص الاسعار",
@@ -28,6 +27,14 @@ class Languages {
             "نحن نحترم خصوصية المستخدم, لذلك فان  جميع البيانات التابعة للمستخدم من سجل لعمليات الشراء او مراسلات او عناوين او بيانات الحساب او غير ذلك هي بيانات محفوظة ولا يتم مشاركتها مع اي جهة اخرى ولا يتم استخدامها من قبل التطبيق الا للاغراض المتعلقة بعمليات العرض والشراء. ",
 
     "userAgreement": "اتفاقية المستخدم",
+
+    //login screen - login fragment
+    "logo": "IraqMall",
+    "enterPassword": "ادخل رمز الدخول",
+    "forgotPassword": "هل نسيت رمز الدخول؟",
+    "login": "تسجيل الدخول",
+    "newAccount": "انشاء حساب؟",
+
   };
   static Map<String, String> _englishLanguage = {
     //welcome screen
@@ -56,6 +63,14 @@ class Languages {
             "We highly respect user privacy, all user information in this application is saved privately and is not benn shared to any third parties, also these information is only used "
             "for the purposes of selling and showing products.",
     "userAgreement": "User Agreement",
+
+    //login screen - login fragment
+    "logo": "IraqMall",
+    "enterPassword": "enter password",
+    "forgotPassword": "forgot password?",
+    "login": "login",
+    "newAccount": "new account?",
+
   };
 
   late Map<String, String> _currentLanguage;

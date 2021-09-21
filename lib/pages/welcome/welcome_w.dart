@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:seller/pages/login/login.dart';
+import 'package:seller/pages/login/login_w.dart';
 import 'package:seller/pages/start/material_app_props_controller.dart';
 import 'package:seller/pages/welcome/carousel.dart';
 import 'package:seller/utilities/langauges.dart';

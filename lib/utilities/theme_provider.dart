@@ -3,7 +3,7 @@ import 'hive_prefs.dart';
 
 class ThemeProvider{
 
-  final darkTheme = ThemeData(
+  static ThemeData darkTheme = ThemeData(
     primarySwatch: Colors.indigo,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     backgroundColor: Color(0xff121321),
@@ -50,7 +50,7 @@ class ThemeProvider{
       displayColor: Color(0xffF5FBFF),
     ),
   );
-  final lightTheme = ThemeData(
+  static ThemeData lightTheme = ThemeData(
     primarySwatch: Colors.yellow,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     backgroundColor: Colors.cyanAccent,

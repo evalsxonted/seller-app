@@ -37,7 +37,7 @@ class CustomInput extends StatelessWidget {
                   child: inputIcon ??
                       Icon(Icons.text_fields, color: _ui.iconColor)),
               border: InputBorder.none,
-              hintStyle: _ui.hintStyle),
+              hintStyle: _ui.textFieldHintStyle),
         ),
       ),
     );

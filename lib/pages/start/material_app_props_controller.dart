@@ -26,7 +26,7 @@ class PropsHandler{
     return _singleton ??= PropsHandler._();
   }
 
-  ValueNotifier get notifier => _valueNotifier;
+  ValueNotifier<int> get notifier => _valueNotifier;
 
   void setThemeMode(ThemeMode newThemeMode){
     if(_themeMode == newThemeMode){

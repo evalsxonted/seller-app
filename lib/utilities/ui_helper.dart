@@ -8,7 +8,7 @@ class HelperUI {
   static const double smallPadding = 5;
   static const double normalPadding = 10;
   static const double largePadding = 15;
-  static const double extraLargePadding = 20;
+  static const double extraLargePadding = 40;
 
   HelperUI(this.context) {
     _currentTheme = _getTheme;
@@ -28,9 +28,9 @@ class HelperUI {
   Color get iconColor => _currentTheme.hintColor;
 
   Color get textFieldBgColor => _currentTheme.canvasColor;
-  TextStyle? get hintStyle => _currentTheme.textTheme.caption
+  TextStyle? get textFieldHintStyle => _currentTheme.textTheme.caption
       ?.copyWith(color: hintColor);
-  TextStyle? get textFieldTextStyle => _currentTheme.textTheme.headline4;
+  TextStyle? get textFieldTextStyle => _currentTheme.textTheme.bodyText1;
   double get maxWidth => _mediaQuery.size.width;
 
   double get maxHeight => _mediaQuery.size.height;

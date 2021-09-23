@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'locale_provider.dart';
-
 class Languages {
   static Map<String, String> _arabicLanguage = {
     //welcome screen
@@ -34,6 +33,7 @@ class Languages {
     "forgotPassword": "هل نسيت رمز الدخول؟",
     "login": "تسجيل الدخول",
     "newAccount": "انشاء حساب؟",
+    "enterPhone": "ادخل رقم الهاتف",
 
   };
   static Map<String, String> _englishLanguage = {
@@ -70,6 +70,7 @@ class Languages {
     "forgotPassword": "forgot password?",
     "login": "login",
     "newAccount": "new account?",
+    "enterPhone": "enter phone number",
 
   };
 

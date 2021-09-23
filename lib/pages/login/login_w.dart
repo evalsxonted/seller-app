@@ -28,7 +28,6 @@ class LoginInherit extends InheritedWidget {
 
 class Login extends StatelessWidget {
   final HelperUI _helperUI = HelperUI(PropsHandler.getContext);
-
   @override
   Widget build(BuildContext context) {
     return LoginInherit(

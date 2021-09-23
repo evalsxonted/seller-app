@@ -6,15 +6,16 @@ import 'package:seller/utilities/locale_provider.dart';
 import 'package:seller/utilities/ui_helper.dart';
 
 class LanguageButtons extends StatelessWidget {
-  final LangBtnController _langBtn = LangBtnController();
-  final HelperUI _ui =  HelperUI(PropsHandler.getContext);
-  final Languages _languages = Languages(PropsHandler.singleton.getLocale);
+  static LangBtnController _langBtn = LangBtnController();
+  late final HelperUI _ui;
+  late final Languages _languages;
 
   @override
   Widget build(BuildContext context) {
+    _ui = HelperUI(context);
+    _languages = Languages(PropsHandler.singleton.getLocale);
     return ValueListenableBuilder(
-      valueListenable: _langBtn
-          .langButtonNotifier,
+      valueListenable: _langBtn.langButtonNotifier,
       builder: (_, value, ___) {
         if (value as bool == true) {
           return Container(
@@ -33,17 +34,15 @@ class LanguageButtons extends StatelessWidget {
                       borderRadius: BorderRadiusDirectional.only(
                           topStart: Radius.circular(20),
                           bottomStart: Radius.circular(20)),
-                      color: _ui.langButtonColor
-                          .withAlpha(
+                      color: _ui.langButtonColor.withAlpha(
                           PropsHandler.singleton.getLocale ==
-                              LocaleProvider.arabicLocale ? 255 : 100),
+                                  LocaleProvider.arabicLocale
+                              ? 255
+                              : 100),
                     ),
                     child: Text(
                       "ar",
-                      style: Theme
-                          .of(context)
-                          .textTheme
-                          .bodyText2,
+                      style: Theme.of(context).textTheme.bodyText2,
                     ),
                   ),
                 ),
@@ -57,17 +56,15 @@ class LanguageButtons extends StatelessWidget {
                       borderRadius: BorderRadiusDirectional.only(
                           topEnd: Radius.circular(20),
                           bottomEnd: Radius.circular(20)),
-                      color: _ui.langButtonColor
-                          .withAlpha(
+                      color: _ui.langButtonColor.withAlpha(
                           PropsHandler.singleton.getLocale ==
-                              LocaleProvider.englishLocale ? 255 : 100),
+                                  LocaleProvider.englishLocale
+                              ? 255
+                              : 100),
                     ),
                     child: Text(
                       "en",
-                      style: Theme
-                          .of(context)
-                          .textTheme
-                          .bodyText2,
+                      style: Theme.of(context).textTheme.bodyText2,
                     ),
                   ),
                 ),
@@ -87,28 +84,23 @@ class LanguageButtons extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.language_outlined,
-                    color: Theme
-                        .of(context)
-                        .primaryColor,
+                    color: Theme.of(context).primaryColor,
                   ),
                   SizedBox(
                     width: 5,
                   ),
                   Text(
                     _languages.getText("language"),
-                    style: Theme
-                        .of(context)
-                        .textTheme
-                        .bodyText2,
+                    style: Theme.of(context).textTheme.bodyText2,
                   ),
                 ],
               ),
             ),
           );
         }
-      },);
+      },
+    );
   }
-
 
   enButtonAction() {
     _langBtn.setLangPressed = false;
@@ -119,4 +111,5 @@ class LanguageButtons extends StatelessWidget {
     _langBtn.setLangPressed = false;
     PropsHandler.singleton.setLocale(LocaleProvider.arabicLocale);
   }
+
 }

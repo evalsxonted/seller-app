@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seller/utilities/ui_helper.dart';
 
 enum ButtonType {
   primary,
@@ -9,14 +10,16 @@ class MainButton extends StatelessWidget {
   final String buttonText;
   final VoidCallback buttonFunction;
   final ButtonType buttonType;
+  late final HelperUI _ui;
 
-  const MainButton(
+  MainButton(
       {required this.buttonText,
       required this.buttonFunction,
        this.buttonType = ButtonType.primary});
 
   @override
   Widget build(BuildContext context) {
+    _ui = HelperUI(context);
     return InkWell(
       onTap: buttonFunction,
       child: Container(
@@ -24,25 +27,24 @@ class MainButton extends StatelessWidget {
         height: 70,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
-          color: getButtonColor(context),
+          color: getButtonColor,
           borderRadius: BorderRadius.all(Radius.circular(5)),
         ),
-        child: Text(buttonText, style: getButtonTextColor(context)),
+        child: Text(buttonText, style: getButtonTextColor),
       ),
     );
   }
-  Color getButtonColor(BuildContext context){
+
+  Color get getButtonColor {
     switch(buttonType){
-      case ButtonType.primary: return Theme.of(context).primaryColor;
-      case ButtonType.accent: return Theme.of(context).accentColor;
-      default : return Theme.of(context).primaryColor;
+      case ButtonType.primary: return _ui.primaryButtonColor;
+      case ButtonType.accent: return _ui.accentButtonColor;
     }
   }
-  TextStyle? getButtonTextColor(BuildContext context){
+  TextStyle? get getButtonTextColor {
     switch(buttonType){
-      case ButtonType.primary: return Theme.of(context).textTheme.button;
-      case ButtonType.accent: return Theme.of(context).textTheme.button?.copyWith(color: Theme.of(context).hintColor);
-      default : return Theme.of(context).textTheme.button;
+      case ButtonType.primary: return _ui.primaryButtonTextStyle;
+      case ButtonType.accent: return _ui.accentButtonTextStyle;
     }
   }
 }

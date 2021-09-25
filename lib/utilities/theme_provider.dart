@@ -17,28 +17,31 @@ class ThemeProvider{
     highlightColor: Color(0xffF5FBFF),
     dialogBackgroundColor: Color(0xff35363A),
     textTheme: TextTheme(
-      //normal text
-      bodyText1: TextStyle(
-        fontSize: 20,
-        fontWeight: FontWeight.w600,
-      ),
-      bodyText2: TextStyle(
-        fontSize: 16,
-        fontWeight: FontWeight.w400,
-      ),
-      //titles and headlines
+
+      //big title
       headline1: TextStyle(
         fontSize: 25,
         fontWeight: FontWeight.w800,
       ),
+      //normal title
       headline2: TextStyle(
-        fontSize: 20,
+        fontSize: 22,
         fontWeight: FontWeight.w700,
       ),
-      button: TextStyle(
+      //big body text
+      headline3: TextStyle(
         fontSize: 20,
         fontWeight: FontWeight.w600,
-        color: Color(0xffF5FBFF),
+      ),
+      //normal body text
+      headline4: TextStyle(
+        fontSize: 18,
+        fontWeight: FontWeight.w500,
+      ),
+      //small body text
+      headline5: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.w400,
       ),
       //caption == hint text
       caption: TextStyle(
@@ -64,28 +67,31 @@ class ThemeProvider{
     highlightColor: Color(0xffF5FBFF),
     dialogBackgroundColor: Color(0xff35363A),
     textTheme: TextTheme(
-      //normal text
-      bodyText1: TextStyle(
-        fontSize: 20,
-        fontWeight: FontWeight.w600,
-      ),
-      bodyText2: TextStyle(
-        fontSize: 16,
-        fontWeight: FontWeight.w400,
-      ),
-      //titles and headlines
+
+      //big title
       headline1: TextStyle(
         fontSize: 25,
         fontWeight: FontWeight.w800,
       ),
+      //normal title
       headline2: TextStyle(
-        fontSize: 20,
+        fontSize: 22,
         fontWeight: FontWeight.w700,
       ),
-      button: TextStyle(
+      //big body text
+      headline3: TextStyle(
         fontSize: 20,
         fontWeight: FontWeight.w600,
-        color: Color(0xffF5FBFF),
+      ),
+      //normal body text
+      headline4: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.w400,
+      ),
+      //small body text
+      headline5: TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w500,
       ),
       //caption == hint text
       caption: TextStyle(

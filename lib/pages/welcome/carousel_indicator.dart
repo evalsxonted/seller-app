@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seller/widgets/home_wrapper.dart';
 
 import 'welcome_w.dart';
 
@@ -26,8 +27,8 @@ class CarouselIndicator extends StatelessWidget {
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: currentIndex == index
-                        ? Colors.white
-                        : Theme.of(context).primaryColor,
+                        ? HomeInherited.of(context)!.ui.highlightColor
+                        : HomeInherited.of(context)!.ui.primaryButtonColor,
                   ),
                 );
               },

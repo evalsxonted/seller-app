@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:seller/pages/start/material_app_props_controller.dart';
 import 'package:seller/pages/welcome/lanugae_buttons_c.dart';
-import 'package:seller/utilities/langauges.dart';
 import 'package:seller/utilities/locale_provider.dart';
-import 'package:seller/utilities/ui_helper.dart';
+import 'package:seller/widgets/home_wrapper.dart';
 
 class LanguageButtons extends StatelessWidget {
-  static LangBtnController _langBtn = LangBtnController();
-  late final HelperUI _ui;
-  late final Languages _languages;
+  final LangBtnController _langBtn = LangBtnController();
 
   @override
   Widget build(BuildContext context) {
-    _ui = HelperUI(context);
-    _languages = Languages(PropsHandler.singleton.getLocale);
+    HomeInherited homeInherited = HomeInherited.of(context)!;
     return ValueListenableBuilder(
       valueListenable: _langBtn.langButtonNotifier,
       builder: (_, value, ___) {
@@ -34,7 +30,7 @@ class LanguageButtons extends StatelessWidget {
                       borderRadius: BorderRadiusDirectional.only(
                           topStart: Radius.circular(20),
                           bottomStart: Radius.circular(20)),
-                      color: _ui.langButtonColor.withAlpha(
+                      color: homeInherited.ui.langButtonColor.withAlpha(
                           PropsHandler.singleton.getLocale ==
                                   LocaleProvider.arabicLocale
                               ? 255
@@ -42,7 +38,7 @@ class LanguageButtons extends StatelessWidget {
                     ),
                     child: Text(
                       "ar",
-                      style: Theme.of(context).textTheme.bodyText2,
+                      style: homeInherited.ui.smallTextStyle,
                     ),
                   ),
                 ),
@@ -56,7 +52,7 @@ class LanguageButtons extends StatelessWidget {
                       borderRadius: BorderRadiusDirectional.only(
                           topEnd: Radius.circular(20),
                           bottomEnd: Radius.circular(20)),
-                      color: _ui.langButtonColor.withAlpha(
+                      color: homeInherited.ui.langButtonColor.withAlpha(
                           PropsHandler.singleton.getLocale ==
                                   LocaleProvider.englishLocale
                               ? 255
@@ -64,7 +60,7 @@ class LanguageButtons extends StatelessWidget {
                     ),
                     child: Text(
                       "en",
-                      style: Theme.of(context).textTheme.bodyText2,
+                      style: homeInherited.ui.smallTextStyle,
                     ),
                   ),
                 ),
@@ -84,14 +80,14 @@ class LanguageButtons extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.language_outlined,
-                    color: Theme.of(context).primaryColor,
+                    color: homeInherited.ui.iconColor,
                   ),
                   SizedBox(
                     width: 5,
                   ),
                   Text(
-                    _languages.getText("language"),
-                    style: Theme.of(context).textTheme.bodyText2,
+                    homeInherited.languages.getText("language"),
+                    style: homeInherited.ui.normalTextStyle,
                   ),
                 ],
               ),

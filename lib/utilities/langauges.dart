@@ -34,6 +34,10 @@ class Languages {
     "login": "تسجيل الدخول",
     "newAccount": "انشاء حساب؟",
     "enterPhone": "ادخل رقم الهاتف",
+    //login screen - signup fragment
+    "enterName": "ادخل اسم المستخدم",
+    "createAccount": "تسجيل الحساب",
+    "alreadyExist": "لديك حساب؟",
 
   };
   static Map<String, String> _englishLanguage = {
@@ -71,6 +75,11 @@ class Languages {
     "login": "login",
     "newAccount": "new account?",
     "enterPhone": "enter phone number",
+    //login screen - signup fragment
+    "enterName": "enter user name",
+    "createAccount": "create account",
+    "alreadyExist": "exist account?",
+
 
   };
 

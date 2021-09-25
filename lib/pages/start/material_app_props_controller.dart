@@ -10,7 +10,7 @@ class PropsHandler{
   late ValueNotifier<int> _valueNotifier;
   ThemeProvider _themeProvider = ThemeProvider();
   LocaleProvider _localeProvider = LocaleProvider();
-  static GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+  GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
   late ThemeMode _themeMode ;
   late Locale _locale;
 
@@ -59,6 +59,6 @@ class PropsHandler{
   ThemeMode get getThemeMode => _themeMode;
   Locale get getLocale => _locale;
   TextDirection get getTextDirection => _currentDirectionality(_locale);
-  static BuildContext get getContext => navigatorKey.currentContext!;
+   BuildContext get getContext => navigatorKey.currentContext!;
 
 }

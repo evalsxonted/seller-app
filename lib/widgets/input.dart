@@ -7,7 +7,7 @@ class CustomInput extends StatelessWidget {
   final String? hintText;
   final TextEditingController editingController;
   final bool? enabled;
-  final HelperUI _ui = HelperUI(PropsHandler.getContext);
+  final HelperUI _ui = HelperUI(PropsHandler.singleton.getContext);
 
   CustomInput(
       {Key? key,

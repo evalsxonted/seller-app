@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:seller/pages/start/material_app_props_controller.dart';
-import 'package:seller/utilities/langauges.dart';
+import 'package:seller/widgets/home_wrapper.dart';
 
 
 class CarouselItem extends StatelessWidget {
   final String imageSrc;
   final String textCode;
   CarouselItem({Key? key, required this.imageSrc, required this.textCode}) : super(key: key);
-  final Languages _languages = Languages(PropsHandler.singleton.getLocale);
 
   @override
   Widget build(BuildContext context) {
+    HomeInherited homeInherited = HomeInherited.of(context)!;
+
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
-            width: MediaQuery.of(context).size.width * 0.7,
-            height: MediaQuery.of(context).size.width * 0.7,
+            width: homeInherited.ui.maxWidth * 0.7,
+            height: homeInherited.ui.maxWidth * 0.7,
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage(imageSrc), fit: BoxFit.cover),
@@ -39,8 +39,8 @@ class CarouselItem extends StatelessWidget {
                 ? Column(
                     children: [
                       Text(
-                        _languages.getText(textCode),
-                        style: Theme.of(context).textTheme.bodyText1,
+                        homeInherited.languages.getText(textCode),
+                        style: homeInherited.ui.normalTextStyle,
                         textAlign: TextAlign.center,
                       ),
                       InkWell(
@@ -53,17 +53,15 @@ class CarouselItem extends StatelessWidget {
                           // );
                         },
                         child: Text(
-                          _languages.getText("here"),
-                          style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                              decoration: TextDecoration.underline,
-                              color: Theme.of(context).accentColor),
+                          homeInherited.languages.getText("here"),
+                          style: homeInherited.ui.highlightTextStyle,
                         ),
                       ),
                     ],
                   )
                 : Text(
-                    _languages.getText(textCode),
-                    style: Theme.of(context).textTheme.bodyText1,
+                    homeInherited.languages.getText(textCode),
+                    style: homeInherited.ui.normalTextStyle,
                     textAlign: TextAlign.center,
                   ),
           ),

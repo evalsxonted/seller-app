@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:seller/utilities/ui_helper.dart';
 import 'package:seller/widgets/home_wrapper.dart';
 
 class LogoBar extends StatelessWidget {
@@ -9,10 +8,10 @@ class LogoBar extends StatelessWidget {
     return Container(
       width: homeInherited.ui.maxWidth,
       margin: EdgeInsets.only(
-          left: HelperUI.largePadding,
-          top: HelperUI.extraLargePadding,
-          right: HelperUI.largePadding,
-          bottom: HelperUI.extraLargePadding),
+          left: homeInherited.ui.largePadding,
+          top: homeInherited.ui.extraLargePadding,
+          right: homeInherited.ui.largePadding,
+          bottom: homeInherited.ui.extraLargePadding),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

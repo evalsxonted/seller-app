@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:seller/pages/start/material_app_props_controller.dart';
 import 'package:seller/utilities/ui_helper.dart';
+import 'package:seller/widgets/home_wrapper.dart';
 
 class CustomInput extends StatelessWidget {
   final Widget? inputIcon;
   final String? hintText;
   final TextEditingController editingController;
   final bool? enabled;
-  final HelperUI _ui = HelperUI(PropsHandler.singleton.getContext);
 
   CustomInput(
       {Key? key,
@@ -15,15 +14,17 @@ class CustomInput extends StatelessWidget {
       this.hintText,
       required this.editingController,
       this.enabled})
-      : super(key: key);
+      : super(key: key) ;
+
 
   @override
   Widget build(BuildContext context) {
+    HelperUI _ui = HomeInherited.of(context)!.ui;
     return Container(
       height: 70,
       decoration: BoxDecoration(
         color: _ui.textFieldBgColor,
-        borderRadius: BorderRadius.all(Radius.circular(HelperUI.smallPadding)),
+        borderRadius: BorderRadius.all(Radius.circular(_ui.smallPadding)),
       ),
       child: Center(
         child: TextField(
@@ -33,7 +34,7 @@ class CustomInput extends StatelessWidget {
           decoration: InputDecoration(
               hintText: hintText ?? ".....",
               icon: Padding(
-                  padding: EdgeInsetsDirectional.only(start: HelperUI.largePadding),
+                  padding: EdgeInsetsDirectional.only(start: _ui.largePadding),
                   child: inputIcon ??
                       Icon(Icons.text_fields, color: _ui.iconColor)),
               border: InputBorder.none,

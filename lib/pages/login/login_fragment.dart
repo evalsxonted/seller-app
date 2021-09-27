@@ -1,16 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:seller/pages/login/login_w.dart';
 import 'package:seller/pages/login/signup_fragment.dart';
-import 'package:seller/utilities/ui_helper.dart';
 import 'package:seller/widgets/button_main.dart';
+import 'package:seller/widgets/clickable_text.dart';
 import 'package:seller/widgets/home_wrapper.dart';
-import 'package:seller/widgets/input.dart';
-
+import 'forgot_fragment_w.dart';
+import 'login_input.dart';
 import 'logo_bar.dart';
 
-class LoginFragment extends StatelessWidget {
-  static TextEditingController _phoneController = TextEditingController();
-  static TextEditingController _passwordController = TextEditingController();
+class LoginFragment extends StatefulWidget {
+  @override
+  _LoginFragmentState createState() => _LoginFragmentState();
+}
+
+class _LoginFragmentState extends State<LoginFragment> {
+  late final TextEditingController _phoneController;
+
+  late final TextEditingController _passwordController;
+
+  @override
+  void initState() {
+    _phoneController = TextEditingController();
+    _passwordController = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _phoneController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     HomeInherited homeInherited = HomeInherited.of(context)!;
@@ -21,72 +42,50 @@ class LoginFragment extends StatelessWidget {
           //logo bar
           LogoBar(),
           //phone input
-          Container(
-            margin: EdgeInsets.only(
-              right: HelperUI.largePadding,
-              left: HelperUI.largePadding,
-              top: HelperUI.largePadding,
-            ),
-            child: CustomInput(
-              key: Key("phone"),
-              editingController: _phoneController,
-              hintText: homeInherited.languages.getText("enterPhone"),
-              inputIcon: Image.asset(
-                "assets/phone.png",
-                width: 20,
-                height: 20,
-              ),
-            ),
+          LoginInput(
+            inputController: _phoneController,
+            hintText: homeInherited.languages.getText("enterPhone"),
+            imageSrc: "assets/phone.png",
           ),
           //password input
-          Container(
-            margin: EdgeInsets.only(
-                right: HelperUI.largePadding,
-                left: HelperUI.largePadding,
-                top: HelperUI.largePadding,
-                bottom: HelperUI.extraLargePadding),
-            child: CustomInput(
-              key: Key("password"),
-              editingController: _passwordController,
-              hintText: homeInherited.languages.getText("enterPassword"),
-              inputIcon: Image.asset(
-                "assets/password.png",
-                width: 20,
-                height: 20,
-              ),
-            ),
+          LoginInput(
+            inputController: _passwordController,
+            hintText: homeInherited.languages.getText("enterPassword"),
+            imageSrc: "assets/password.png",
           ),
-          InkWell(
-            onTap: () {},
-            child: Text(
-              homeInherited.languages.getText("forgotPassword"),
-              style: homeInherited.ui.normalTextStyle
-                  ?.copyWith(color: homeInherited.ui.hintColor),
-            ),
+          SizedBox(
+            height: homeInherited.ui.largePadding,
+          ),
+          ClickableText(
+            text: homeInherited.languages.getText("forgotPassword"),
+            textAction: goToForgotFragment,
           ),
           Container(
             margin: EdgeInsets.only(
-                right: HelperUI.largePadding,
-                left: HelperUI.largePadding,
-                top: HelperUI.largePadding,
-                bottom: HelperUI.largePadding),
+                right: homeInherited.ui.largePadding,
+                left: homeInherited.ui.largePadding,
+                top: homeInherited.ui.largePadding,
+                bottom: homeInherited.ui.largePadding),
             child: MainButton(
               buttonText: homeInherited.languages.getText("login"),
               buttonType: ButtonType.primary,
               buttonFunction: () {},
             ),
           ),
-          InkWell(
-            onTap: () => goToSignUpFragment(context),
-            child: Text(
-              homeInherited.languages.getText("newAccount"),
-              style: homeInherited.ui.normalTextStyle
-                  ?.copyWith(color: homeInherited.ui.hintColor),
-            ),
+          ClickableText(
+            text: homeInherited.languages.getText("newAccount"),
+            textAction: goToSignUpFragment,
           ),
         ],
       ),
     );
   }
-  goToSignUpFragment(BuildContext context) => LoginInherit.of(context)!.loginController.changePage = SignUpFragment();
+
+  goToSignUpFragment() =>
+      LoginInherit.of(context)!.loginController.setFragment = SignUpFragment();
+
+  goToForgotFragment() =>
+      LoginInherit.of(context)!.loginController.setFragment = ForgotFragment(
+          forgotInitialPage:
+          LoginInherit.of(context)!.loginController.forgotInitialPage);
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:seller/pages/welcome/carousel.dart';
-import 'package:seller/utilities/ui_helper.dart';
 import 'package:seller/widgets/home_wrapper.dart';
 import 'language_buttons_w.dart';
 import 'welcome_c.dart';
@@ -49,7 +48,7 @@ class Welcome extends StatelessWidget{
             ],
           ),
           body: Padding(
-            padding: EdgeInsets.only(left: HelperUI.largePadding, right: HelperUI.largePadding, top: HelperUI.largePadding),
+            padding: EdgeInsets.only(left: homeInherited.ui.largePadding, right: homeInherited.ui.largePadding, top: homeInherited.ui.largePadding),
             child: CarouselWrapper(),
           ),
         );

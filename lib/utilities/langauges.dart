@@ -38,6 +38,15 @@ class Languages {
     "enterName": "ادخل اسم المستخدم",
     "createAccount": "تسجيل الحساب",
     "alreadyExist": "لديك حساب؟",
+    //login screen - forgot fragment
+    "forgotEnterPhoneMessage": "قم بادخال رقم الهاتف واضغط التالي, سوف تصلك رسالة نصية خلال دقائق",
+    "next": "التالي",
+    "cancel": "الغاء",
+    "enterResetCodeMessage": "قم بادخال الرمز الذي استلمته عن طريق الرسالة النصية",
+    "resetCodeHint": "رمز الاسترجاع",
+    "forgotEnterPasswordMessage": "ادخل رمز الدخول الجديد الذي تريد استخدامه",
+    "back": "رجوع",
+    "passwordAlreadyResetMessage": "لقد تم تغيير رمز الدخول بنجاح, قم باستخدام الرمز الجديد لتسجيل الدخول",
 
   };
   static Map<String, String> _englishLanguage = {
@@ -79,7 +88,15 @@ class Languages {
     "enterName": "enter user name",
     "createAccount": "create account",
     "alreadyExist": "exist account?",
-
+    //login screen - forgot fragment
+    "forgotEnterPhoneMessage": "enter your phone number and press -next-, you will get an sms in a minute",
+    "next": "next",
+    "cancel": "cancel",
+    "enterResetCodeMessage": "enter the code you received by sms and press next",
+    "resetCodeHint": "reset code",
+    "forgotEnterPasswordMessage": "enter the new password you want to use",
+    "back": "back",
+    "passwordAlreadyResetMessage": "password reset successfully, use the new password to login",
 
   };
 

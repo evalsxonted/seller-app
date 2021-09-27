@@ -5,10 +5,10 @@ class HelperUI {
   late ThemeData _currentTheme;
   late MediaQueryData _mediaQuery;
 
-  static const double smallPadding = 5;
-  static const double normalPadding = 10;
-  static const double largePadding = 15;
-  static const double extraLargePadding = 40;
+  final double smallPadding = 5;
+  final double normalPadding = 10;
+  final double largePadding = 15;
+  final double extraLargePadding = 40;
 
   HelperUI(this.context) {
     _currentTheme = _getTheme;

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:seller/utilities/ui_helper.dart';
 
+import 'home_wrapper.dart';
+
 enum ButtonType {
   primary,
   accent,
@@ -12,14 +14,15 @@ class MainButton extends StatelessWidget {
   final ButtonType buttonType;
   late final HelperUI _ui;
 
-  MainButton(
-      {required this.buttonText,
-      required this.buttonFunction,
-       this.buttonType = ButtonType.primary});
+  MainButton({
+    required this.buttonText,
+    required this.buttonFunction,
+    this.buttonType = ButtonType.primary,
+  });
 
   @override
   Widget build(BuildContext context) {
-    _ui = HelperUI(context);
+    _ui = HomeInherited.of(context)!.ui;
     return InkWell(
       onTap: buttonFunction,
       child: Container(
@@ -36,15 +39,20 @@ class MainButton extends StatelessWidget {
   }
 
   Color get getButtonColor {
-    switch(buttonType){
-      case ButtonType.primary: return _ui.primaryButtonColor;
-      case ButtonType.accent: return _ui.accentButtonColor;
+    switch (buttonType) {
+      case ButtonType.primary:
+        return _ui.primaryButtonColor;
+      case ButtonType.accent:
+        return _ui.accentButtonColor;
     }
   }
+
   TextStyle? get getButtonTextColor {
-    switch(buttonType){
-      case ButtonType.primary: return _ui.primaryButtonTextStyle;
-      case ButtonType.accent: return _ui.accentButtonTextStyle;
+    switch (buttonType) {
+      case ButtonType.primary:
+        return _ui.primaryButtonTextStyle;
+      case ButtonType.accent:
+        return _ui.accentButtonTextStyle;
     }
   }
 }

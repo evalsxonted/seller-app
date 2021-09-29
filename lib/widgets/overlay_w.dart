@@ -23,13 +23,15 @@ class MyOverlay extends StatelessWidget {
             return LayoutBuilder(
               builder: (context, constraints) => Visibility(
                 visible: value,
-                child: BackdropFilter(
-                  filter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
-                  child: Container(
-                    height: constraints.maxHeight,
-                    width: constraints.maxWidth,
-                    child: Center(
-                      child: CircularProgressIndicator(),
+                child: AbsorbPointer(
+                  child: BackdropFilter(
+                    filter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    child: Container(
+                      height: constraints.maxHeight,
+                      width: constraints.maxWidth,
+                      child: Center(
+                        child: CircularProgressIndicator(),
+                      ),
                     ),
                   ),
                 ),

@@ -20,10 +20,7 @@ class User {
     required this.phone,
     required this.enabled,
   });
-}
-
-class UserHandler {
-  User fromMap(Map userInfo) {
+  static User fromMap(Map userInfo) {
     return User(
       device: userInfo["device"],
       name: userInfo["name"],
@@ -35,28 +32,24 @@ class UserHandler {
       province: userInfo["province"],
     );
   }
-
-  User fromJson(String userJson) {
-    return fromMap(jsonDecode(userJson));
-  }
-
-  Map mapFromUser(User user) {
+  // static User fromJson(String userJson) {
+  //   return fromMap(jsonDecode(userJson));
+  // }
+  Map mapFromUser() {
     return {
-      "device": user.device,
-      "name": user.name,
-      "password": user.password,
-      "phone": user.phone,
-      "enabled": user.enabled,
-      "language": user.language,
-      "location": user.location,
-      "province": user.province,
+      "device": device,
+      "name": name,
+      "password": password,
+      "phone": phone,
+      "enabled": enabled,
+      "language": language,
+      "location": location,
+      "province": province,
     };
   }
-
-  String jsonFromUser(User user) {
-    return jsonEncode(mapFromUser(user));
+  String jsonFromUser() {
+    return jsonEncode(mapFromUser());
   }
-
   static String sqliteUserTable =
       'CREATE TABLE users(phone INTEGER PRIMARY KEY, name TEXT, password TEXT, province TEXT, location TEXT, language TEXT, enabled BOOLEAN)';
 }

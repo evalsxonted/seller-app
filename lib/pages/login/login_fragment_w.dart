@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:seller/pages/login/login_w.dart';
-import 'package:seller/pages/login/signup_fragment.dart';
+import 'package:seller/pages/login/login_fragment_c.dart';
 import 'package:seller/widgets/button_main.dart';
 import 'package:seller/widgets/clickable_text.dart';
 import 'package:seller/widgets/home_wrapper.dart';
-import 'forgot_fragment_w.dart';
 import 'login_input.dart';
 import 'logo_bar.dart';
 
@@ -14,21 +12,17 @@ class LoginFragment extends StatefulWidget {
 }
 
 class _LoginFragmentState extends State<LoginFragment> {
-  late final TextEditingController _phoneController;
-
-  late final TextEditingController _passwordController;
-
+  late final LoginFragmentController loginFragmentController ;
   @override
   void initState() {
-    _phoneController = TextEditingController();
-    _passwordController = TextEditingController();
+    loginFragmentController = LoginFragmentController(context);
     super.initState();
   }
 
   @override
   void dispose() {
-    _phoneController.dispose();
-    _passwordController.dispose();
+    loginFragmentController.phoneController.dispose();
+    loginFragmentController.passwordController.dispose();
     super.dispose();
   }
 
@@ -43,13 +37,13 @@ class _LoginFragmentState extends State<LoginFragment> {
           LogoBar(),
           //phone input
           LoginInput(
-            inputController: _phoneController,
+            inputController: loginFragmentController.phoneController,
             hintText: homeInherited.languages.getText("enterPhone"),
             imageSrc: "assets/phone.png",
           ),
           //password input
           LoginInput(
-            inputController: _passwordController,
+            inputController: loginFragmentController.passwordController,
             hintText: homeInherited.languages.getText("enterPassword"),
             imageSrc: "assets/password.png",
           ),
@@ -58,7 +52,7 @@ class _LoginFragmentState extends State<LoginFragment> {
           ),
           ClickableText(
             text: homeInherited.languages.getText("forgotPassword"),
-            textAction: goToForgotFragment,
+            textAction: loginFragmentController.goToForgotFragment,
           ),
           Container(
             margin: EdgeInsets.only(
@@ -69,23 +63,17 @@ class _LoginFragmentState extends State<LoginFragment> {
             child: MainButton(
               buttonText: homeInherited.languages.getText("login"),
               buttonType: ButtonType.primary,
-              buttonFunction: () {},
+              buttonFunction: loginFragmentController.loginAction,
             ),
           ),
           ClickableText(
             text: homeInherited.languages.getText("newAccount"),
-            textAction: goToSignUpFragment,
+            textAction: loginFragmentController.goToSignUpFragment,
           ),
         ],
       ),
     );
   }
 
-  goToSignUpFragment() =>
-      LoginInherit.of(context)!.loginController.setFragment = SignUpFragment();
 
-  goToForgotFragment() =>
-      LoginInherit.of(context)!.loginController.setFragment = ForgotFragment(
-          forgotInitialPage:
-          LoginInherit.of(context)!.loginController.forgotInitialPage);
 }

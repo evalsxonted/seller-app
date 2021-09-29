@@ -47,6 +47,9 @@ class Languages {
     "forgotEnterPasswordMessage": "ادخل رمز الدخول الجديد الذي تريد استخدامه",
     "back": "رجوع",
     "passwordAlreadyResetMessage": "لقد تم تغيير رمز الدخول بنجاح, قم باستخدام الرمز الجديد لتسجيل الدخول",
+    "errorSendingVerification": "حصل خطا في ارسال رمز التحقق",
+    "wrongCode": "رمز الاسترجاع غير صحيح",
+    "errorUpdating": "خطا في تحديث البيانات",
 
   };
   static Map<String, String> _englishLanguage = {
@@ -76,7 +79,6 @@ class Languages {
             "We highly respect user privacy, all user information in this application is saved privately and is not benn shared to any third parties, also these information is only used "
             "for the purposes of selling and showing products.",
     "userAgreement": "User Agreement",
-
     //login screen - login fragment
     "logo": "IraqMall",
     "enterPassword": "enter password",
@@ -97,6 +99,9 @@ class Languages {
     "forgotEnterPasswordMessage": "enter the new password you want to use",
     "back": "back",
     "passwordAlreadyResetMessage": "password reset successfully, use the new password to login",
+    "errorSendingVerification": "error in sending verification",
+    "wrongCode": "the code is not correct",
+    "errorUpdating": "error in updating",
 
   };
 

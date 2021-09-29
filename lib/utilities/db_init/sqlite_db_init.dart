@@ -15,7 +15,7 @@ class InitSqlite extends InitDB {
   initDatabase() async {
     database = await openDatabase(await getPath(), onCreate: (db, version) async {
       await db.execute(
-        UserHandler.sqliteUserTable
+        User.sqliteUserTable
       );
     }, version: 1);
   }

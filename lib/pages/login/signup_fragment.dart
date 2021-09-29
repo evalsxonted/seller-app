@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:seller/widgets/button_main.dart';
 import 'package:seller/widgets/clickable_text.dart';
 import 'package:seller/widgets/home_wrapper.dart';
-import 'login_fragment.dart';
+import 'login_fragment_w.dart';
 import 'login_input.dart';
 import 'login_w.dart';
 import 'logo_bar.dart';

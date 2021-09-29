@@ -2,5 +2,6 @@
 
 a simple store application
 
-## Getting Started
+## Demo
+https://www.youtube.com/watch?v=j2XAc_n7-B8
 

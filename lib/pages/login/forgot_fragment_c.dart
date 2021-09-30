@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:seller/APIS/user.dart';
+import 'package:seller/APIS/user_api.dart';
 import 'package:seller/utilities/sms_verification.dart';
 import 'package:seller/widgets/home_wrapper.dart';
 import 'package:seller/widgets/snackbar_text.dart';

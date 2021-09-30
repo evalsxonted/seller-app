@@ -32,10 +32,10 @@ class User {
       province: userInfo["province"],
     );
   }
-  // static User fromJson(String userJson) {
-  //   return fromMap(jsonDecode(userJson));
-  // }
-  Map mapFromUser() {
+  static User fromJson(String userJson) {
+    return fromMap(jsonDecode(userJson));
+  }
+  Map<String, Object?> toMap() {
     return {
       "device": device,
       "name": name,
@@ -47,9 +47,21 @@ class User {
       "province": province,
     };
   }
+  Map<String, Object?> toSqlMap() {
+    return {
+      "device": device,
+      "name": name,
+      "password": password,
+      "phone": phone,
+      "enabled": enabled? 1 : 0,
+      "language": language,
+      "location": location,
+      "province": province,
+    };
+  }
   String jsonFromUser() {
-    return jsonEncode(mapFromUser());
+    return jsonEncode(toMap());
   }
   static String sqliteUserTable =
-      'CREATE TABLE users(phone INTEGER PRIMARY KEY, name TEXT, password TEXT, province TEXT, location TEXT, language TEXT, enabled BOOLEAN)';
+      'CREATE TABLE users(phone INTEGER PRIMARY KEY, name TEXT, password TEXT, province TEXT, location TEXT, language TEXT, enabled INTEGER, device TEXT)';
 }

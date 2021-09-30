@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:seller/pages/home/home.dart';
+import 'package:seller/pages/home/home_w.dart';
 import 'package:seller/pages/login/login_w.dart';
 import 'package:seller/pages/start/material_app_props_controller.dart';
 import 'package:seller/pages/welcome/welcome_w.dart';
-import 'package:seller/utilities/hive_prefs.dart';
+import '../../db/hive_prefs.dart';
 import 'package:seller/utilities/theme_provider.dart';
 import 'package:seller/widgets/home_wrapper.dart';
 

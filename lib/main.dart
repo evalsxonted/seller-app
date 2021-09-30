@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'db/db_init/hive_db_init.dart';
 import 'pages/start/start_w.dart';
-import 'utilities/db_init/hive_db_init.dart';
-import 'utilities/db_init/sqlite_db_init.dart';
-import 'utilities/hive_prefs.dart';
+import 'db/hive_prefs.dart';
 
 
 void main() async {
@@ -11,9 +10,8 @@ void main() async {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: Colors.transparent, // transparent status bar
   ));
-  await InitHive().initDatabase();
+  await HiveDB().initDatabase();
   await HivePrefs.open();
-  await InitSqlite().initDatabase();
   runApp(Start());
 }
 

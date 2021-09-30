@@ -1,9 +1,9 @@
 import 'package:hive/hive.dart';
-import 'package:seller/utilities/db_init/db_init.dart';
 import 'package:sqflite/sqflite.dart';
 
+import 'db_init.dart';
 
-class InitHive extends InitDB{
+class HiveDB extends InitDB{
   @override
   Future<String> getPath() async{
     return getDatabasesPath();
@@ -17,5 +17,10 @@ class InitHive extends InitDB{
   @override
   removeDatabase() {
     Hive.deleteFromDisk();
+  }
+
+  @override
+  closeDatabase() {
+    Hive.close();
   }
 }

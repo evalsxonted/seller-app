@@ -65,17 +65,9 @@ flutter:
     - assets/menu_rotate.png
     - assets/send.png
     - assets/image.png
-    - assets/drawer/account.png
-    - assets/drawer/cart.png
-    - assets/drawer/delivery.png
-    - assets/drawer/heart.png
-    - assets/drawer/info.png
-    - assets/drawer/logout.png
-    - assets/drawer/request.png
-    - assets/drawer/products.png
-    - assets/drawer/instagram.png
-    - assets/drawer/facebook.png
+    - assets/drawer/
     - assets/icons/location2.png
+    - assets/json/user.json
 
   fonts:
     - family: Cairo

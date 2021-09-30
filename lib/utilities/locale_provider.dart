@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'hive_prefs.dart';
+import '../db/hive_prefs.dart';
 
 class LocaleProvider{
    static  Locale englishLocale = Locale("en", "US");

@@ -11,7 +11,7 @@ class MySnackBarContent extends StatelessWidget {
   Widget build(BuildContext context) {
     HomeInherited homeInherited = HomeInherited.of(context)!;
     return Text(
-      homeInherited.languages.getText(snackText),
+      snackText,
       style: HomeInherited.of(context)!
           .ui
           .bigTextStyle

@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 import 'locale_provider.dart';
@@ -34,10 +35,20 @@ class Languages {
     "login": "تسجيل الدخول",
     "newAccount": "انشاء حساب؟",
     "enterPhone": "ادخل رقم الهاتف",
-    //login screen - signup fragment
+    "errorGettingUserInfo": "حصل خطا في تحميل البيانات",
+    "errorAddingUser": "خطا في اضافة المستخدم",
+    "wrongPassword": "رمز الدخول غير صحيح",
+    "notValidNumber": "رقم الهاتف غير صالح",
+
+    //*//login screen - signup fragment
     "enterName": "ادخل اسم المستخدم",
     "createAccount": "تسجيل الحساب",
     "alreadyExist": "لديك حساب؟",
+    "verify": "تاكيد",
+    "enterVerificationCode": "ادخل رمز التحقق",
+    "enterVerificationCodeMessage": "قم بادخال الرمز الذي استلمته عن طريق الرسالة النصية",
+    // exist "errorAddingUser": "خطا في اضافة المستخدم",
+
     //login screen - forgot fragment
     "forgotEnterPhoneMessage": "قم بادخال رقم الهاتف واضغط التالي, سوف تصلك رسالة نصية خلال دقائق",
     "next": "التالي",
@@ -48,8 +59,9 @@ class Languages {
     "back": "رجوع",
     "passwordAlreadyResetMessage": "لقد تم تغيير رمز الدخول بنجاح, قم باستخدام الرمز الجديد لتسجيل الدخول",
     "errorSendingVerification": "حصل خطا في ارسال رمز التحقق",
-    "wrongCode": "رمز الاسترجاع غير صحيح",
+    "wrongCode": "الرمز المدخل غير صحيح",
     "errorUpdating": "خطا في تحديث البيانات",
+
 
   };
   static Map<String, String> _englishLanguage = {
@@ -86,10 +98,18 @@ class Languages {
     "login": "login",
     "newAccount": "new account?",
     "enterPhone": "enter phone number",
-    //login screen - signup fragment
+    "errorGettingUserInfo": "error in downloading",
+    "errorAddingUser": "error in adding user",
+    "wrongPassword": "wrong password",
+    "notValidNumber": "not valid number",
+    //*//login screen - signup fragment
     "enterName": "enter user name",
     "createAccount": "create account",
     "alreadyExist": "exist account?",
+    "verify": "verify",
+    "enterVerificationCode": "enter verification code",
+    "enterVerificationCodeMessage": "enter the code you received by sms and press verify",
+    // exist "errorAddingUser": "خطا في اضافة المستخدم",
     //login screen - forgot fragment
     "forgotEnterPhoneMessage": "enter your phone number and press -next-, you will get an sms in a minute",
     "next": "next",
@@ -102,7 +122,6 @@ class Languages {
     "errorSendingVerification": "error in sending verification",
     "wrongCode": "the code is not correct",
     "errorUpdating": "error in updating",
-
   };
 
   late Map<String, String> _currentLanguage;

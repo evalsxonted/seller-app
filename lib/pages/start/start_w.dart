@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:seller/pages/home/home_w.dart';
+import 'package:seller/pages/central/central_w.dart';
+import 'package:seller/pages/customer_service/customer_service_c.dart';
 import 'package:seller/pages/login/login_w.dart';
 import 'package:seller/pages/start/material_app_props_controller.dart';
 import 'package:seller/pages/welcome/welcome_w.dart';
@@ -23,7 +24,7 @@ class Start extends StatelessWidget {
           themeMode: _propsHandler.getThemeMode,
           locale: _propsHandler.getLocale,
           navigatorKey: _propsHandler.navigatorKey,
-          initialRoute: _checkLogged ? '/home' : '/welcome',
+          initialRoute: _checkLogged ? '/central' : '/welcome',
           routes: {
             '/welcome': (context) => HomeWrapper(
               child: Welcome(),
@@ -31,8 +32,11 @@ class Start extends StatelessWidget {
             '/login': (context) => HomeWrapper(
               child: Login(),
             ),
-            '/home': (context) => HomeWrapper(
-              child: Home(),
+            '/central': (context) => HomeWrapper(
+              child: Central(),
+            ),
+            '/customerServices': (context) => HomeWrapper(
+              child: CustomerService(),
             ),
           },
         );

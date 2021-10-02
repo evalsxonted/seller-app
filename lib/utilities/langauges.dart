@@ -61,7 +61,15 @@ class Languages {
     "errorSendingVerification": "حصل خطا في ارسال رمز التحقق",
     "wrongCode": "الرمز المدخل غير صحيح",
     "errorUpdating": "خطا في تحديث البيانات",
-
+    //central app bar
+    "categories": "الاقسام",
+    //central drawer
+    "account": "الحساب",
+    "cart": "سلة المشتريات",
+    "myRequests": "طلباتي",
+    "aboutUs": "من نحن",
+    "exit": "خروج",
+    "followUs": "تابعنا",
 
   };
   static Map<String, String> _englishLanguage = {
@@ -122,6 +130,16 @@ class Languages {
     "errorSendingVerification": "error in sending verification",
     "wrongCode": "the code is not correct",
     "errorUpdating": "error in updating",
+    //central app bar
+    "categories": "categories",
+    //central drawer
+    "account": "account",
+    "cart": "cart",
+    "myRequests": "my request",
+    "aboutUs": "about us",
+    "exit": "exit",
+    "followUs": "follow us",
+
   };
 
   late Map<String, String> _currentLanguage;

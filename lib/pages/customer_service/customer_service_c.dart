@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
+class CustomerService extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-
-    );
+    return Container();
   }
 }

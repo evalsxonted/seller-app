@@ -39,8 +39,9 @@ class LoginFragmentController{
         if(user.password == passwordController.text.trim()){
           UserSqlDB(await Sqlite().initDatabase()).addUser(user).then((bool successful) {
             if(successful){
+              HivePrefs.singleton?.setUserPhone(user.phone);
               HivePrefs.singleton?.setLogged(true);
-              Navigator.pushReplacementNamed(context, "/home");
+              Navigator.pushReplacementNamed(context, "/central");
             }else{
               showSnackBar("errorAddingUser");
             }

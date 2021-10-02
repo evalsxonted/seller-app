@@ -34,4 +34,8 @@ class HivePrefs {
   setLocale(Locale locale) {
     _prefsBox?.put("locale", locale.languageCode+ "-"+ locale.countryCode.toString());
   }
+  int get getUserPhone => _prefsBox?.get('user') ?? -1;
+  setUserPhone(int phone) {
+    _prefsBox?.put("user", phone);
+  }
 }

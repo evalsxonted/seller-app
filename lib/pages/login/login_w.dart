@@ -28,7 +28,6 @@ class LoginInherit extends InheritedWidget {
 class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // HomeInherited homeInherited = HomeInherited.of(context)!;
     return LoginInherit(
         loginController: LoginController(),
         overlayController: MyOverlayController(),

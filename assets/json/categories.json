@@ -1,0 +1,27 @@
+[
+  {
+    "name": "men clothes",
+    "subCategories": [
+      "jeans",
+      "t-shirt",
+      "shirt",
+      "coat"
+    ]
+  },
+  {
+    "name": "women clothes",
+    "subCategories": [
+      "jeans",
+      "t-shirt",
+      "shirt",
+      "skirt"
+    ]
+  },
+  {
+    "name": "cosmetics",
+    "subCategories": [
+      "makeup",
+      "perfumes"
+    ]
+  }
+]

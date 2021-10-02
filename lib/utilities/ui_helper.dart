@@ -29,6 +29,8 @@ class HelperUI {
 
   Color get highlightColor => _currentTheme.highlightColor;
 
+  Color get cardColor => _currentTheme.cardColor;
+
   Color get textFieldBgColor => _currentTheme.canvasColor;
   TextStyle? get textFieldHintStyle => _currentTheme.textTheme.caption
       ?.copyWith(color: hintColor);
@@ -52,6 +54,12 @@ class HelperUI {
       decoration: TextDecoration.underline,
       color: _currentTheme.accentColor);
 
+  TextStyle? get discountedTextStyle => TextStyle(
+      height: 1.2,
+      fontSize: 15,
+      color: _currentTheme.primaryColor,
+      fontWeight: FontWeight.w700,
+      decoration: TextDecoration.lineThrough);
   double get maxWidth => _mediaQuery.size.width;
 
   double get maxHeight => _mediaQuery.size.height;
@@ -59,6 +67,8 @@ class HelperUI {
   Color get primaryButtonColor => _currentTheme.primaryColor;
 
   Color get accentButtonColor => _currentTheme.accentColor;
+
+  Color get dropDownColor => _currentTheme.canvasColor;
 
 
 }

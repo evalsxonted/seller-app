@@ -17,7 +17,6 @@ class ThemeProvider{
     highlightColor: Color(0xffF5FBFF),
     dialogBackgroundColor: Color(0xff35363A),
     textTheme: TextTheme(
-
       //big title
       headline1: TextStyle(
         fontSize: 25,

@@ -1,4 +1,5 @@
 import 'package:path/path.dart';
+import 'package:seller/models/product.dart';
 import 'package:seller/models/user.dart';
 import 'package:sqflite/sqflite.dart';
 
@@ -14,6 +15,9 @@ class Sqlite {
     _database = await openDatabase(await getPath(), onCreate: (db, version) async {
       await db.execute(
         User.sqliteUserTable
+      );
+      await db.execute(
+        ProductInfo.sqliteCartTable
       );
     }, version: 1);
    return _database!;

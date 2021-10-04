@@ -15,6 +15,8 @@ class HelperUI {
     _mediaQuery = _getMediaQuery;
   }
 
+  TextDirection get currentDirection => Directionality.of(context);
+
   ThemeData get _getTheme => Theme.of(context);
 
   MediaQueryData get _getMediaQuery => MediaQuery.of(context);
@@ -69,6 +71,8 @@ class HelperUI {
   Color get accentButtonColor => _currentTheme.accentColor;
 
   Color get dropDownColor => _currentTheme.canvasColor;
+
+  Color get dialogButtonColor => _currentTheme.canvasColor;
 
 
 }

@@ -4,6 +4,7 @@ import 'package:seller/apis/product.dart';
 import 'package:seller/db/hive_prefs.dart';
 import 'package:seller/models/product.dart';
 import 'package:seller/pages/central/central_w.dart';
+import 'package:seller/pages/product/product_w.dart';
 import 'package:seller/widgets/home_wrapper.dart';
 
 class CentralProductCard extends StatelessWidget {
@@ -15,7 +16,7 @@ class CentralProductCard extends StatelessWidget {
     HomeInherited homeInherited = HomeInherited.of(context)!;
     return InkWell(
       onTap: () {
-          // Navigator.of(context).pushReplacementNamed("/product");
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomeWrapper(child: Product( productInfo: productInfo,)),));
       },
       child: Container(
         decoration: BoxDecoration(

@@ -70,6 +70,43 @@ class Languages {
     "aboutUs": "من نحن",
     "exit": "خروج",
     "followUs": "تابعنا",
+    //customer service screen
+    "support": "الدعم",
+    "welcomingText":
+    "اهلا بك عزيزي المستخدم في خدمة العملاء. نسعد باستقبال استفساراتك وطلباتك باي وقت. سيتم الرد عليك خلال دقائق في اوقات العمل الاعتيادية",
+    "seen": "تم قرائة الرسالة",
+    "sendMessageHint": "اكتب رسالتك هنا",
+    //product screen
+    "sizes": "الاحجام",
+    "goToCart": "الذهاب لسلة الشراء",
+    "addToCart": "اضافة لسلة الشراء",
+    "youHaveQuestion": "هل لديك سؤال؟",
+    "talkToUs": "راسلنا",
+    //cart screen
+    // already exist "cart": "cart",
+    "emptyCart": "سلة الشراء فارغة",
+    "buySelected": "شراء المحدد",
+    "IQD": "دينار عراقي",
+    "color": "اللون",
+    "colorChosen": "تم اختيار اللون",
+    "size":"الحجم",
+    "otherDetails": "تفاصيل اخرى",
+    "select": "تحديد",
+    "ok": "حسنا",
+    //exist "cancel": "cancel",
+    "choosePhoto": "اختر اللون من الصور التالية",
+    "chooseSize": "اختر الاحجام المطلوبة",
+    //buying screen
+    "deliveryInfo": "معلومات التوصيل",
+    "receiverName": "اسم المستلم",
+    "receiverPhone": "هاتف المستلم",
+    "province": "المحافظة",
+    "location" : "موقع الاستلام",
+    "deliveryPrice": "سعر التوصيل",
+    "productsPrice": "سعر المنتجات",
+    "totalPrice": "السعر الكلي",
+    "confirmBuying": "تاكيد الشراء",
+    "requestedSuccessfully": "تم الطلب بنجاح",
 
   };
   static Map<String, String> _englishLanguage = {
@@ -139,6 +176,42 @@ class Languages {
     "aboutUs": "about us",
     "exit": "exit",
     "followUs": "follow us",
+    //customer service screen
+    "support": "support",
+    "welcomingText": "Welcome to customer services, we glad to receive your questions and requests at any time, we will reply to you at minutes in the ordinary work times",
+    "seen": "seen",
+    "sendMessageHint": "write your message",
+    //product screen
+    "sizes": "sizes",
+    "goToCart": "open cart",
+    "addToCart": "added to cart",
+    "youHaveQuestion": "do you have a question?",
+    "talkToUs": "talk to us",
+    //cart screen
+    // already exist "cart": "cart",
+    "emptyCart": "empty cart",
+    "buySelected": "buy selected",
+    "IQD": "IQD",
+    "color": "color",
+    "colorChosen": "color chosen",
+    "size":"size",
+    "otherDetails": "other details",
+    "select": "select",
+    "ok": "ok",
+    //exist "cancel": "cancel",
+    "choosePhoto": "choose the color from the following images",
+    "chooseSize": "choose the size",
+    //buying screen
+    "deliveryInfo": "delivery info",
+    "receiverName": "receiver name",
+    "receiverPhone": "receiver phone",
+    "province": "province",
+    "location" : "receiving location",
+    "deliveryPrice": "delivery price",
+    "productsPrice": "products price",
+    "totalPrice": "total price",
+    "confirmBuying": "confirm buying",
+    "requestedSuccessfully": "requested successfully",
 
   };
 

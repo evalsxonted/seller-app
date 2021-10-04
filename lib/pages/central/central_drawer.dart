@@ -53,7 +53,9 @@ class CentralDrawer extends StatelessWidget {
               DrawerItem(
                 itemText: languages.getText("cart"),
                 itemIcon: "assets/drawer/cart.png",
-                itemOnClick: (){},
+                itemOnClick: (){
+                  Navigator.of(context).pushNamed("/cart");
+                },
               ),
               DrawerItem(
                 itemText: languages.getText("myRequests"),
@@ -65,7 +67,6 @@ class CentralDrawer extends StatelessWidget {
                 itemText: languages.getText("aboutUs"),
                 itemIcon: "assets/drawer/info.png",
                 itemOnClick: (){},
-
               ),
               DrawerItem(
                 itemText: languages.getText("exit"),

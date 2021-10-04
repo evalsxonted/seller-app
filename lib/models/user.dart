@@ -63,5 +63,6 @@ class User {
     return jsonEncode(toMap());
   }
   static String sqliteUserTable =
-      'CREATE TABLE users(phone INTEGER PRIMARY KEY, name TEXT, password TEXT, province TEXT, location TEXT, language TEXT, enabled INTEGER, device TEXT)';
+      'CREATE TABLE IF NOT EXISTS users(phone INTEGER PRIMARY KEY, name TEXT,'
+      ' password TEXT, province TEXT, location TEXT, language TEXT, enabled INTEGER, device TEXT)';
 }

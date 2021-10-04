@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:seller/pages/cart/cart_w.dart';
 import 'package:seller/pages/central/central_w.dart';
-import 'package:seller/pages/customer_service/customer_service_c.dart';
+import 'package:seller/pages/customer_service/customer_service_w.dart';
 import 'package:seller/pages/login/login_w.dart';
 import 'package:seller/pages/start/material_app_props_controller.dart';
 import 'package:seller/pages/welcome/welcome_w.dart';
@@ -38,6 +39,10 @@ class Start extends StatelessWidget {
             '/customerServices': (context) => HomeWrapper(
               child: CustomerService(),
             ),
+            '/cart': (context) => HomeWrapper(
+              child: Cart(),
+            ),
+
           },
         );
       },

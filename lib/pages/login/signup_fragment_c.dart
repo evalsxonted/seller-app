@@ -1,10 +1,11 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:seller/apis/user_api.dart';
+import 'package:seller/apis/user.dart';
 import 'package:seller/db/db_init/sqlite_db_init.dart';
 import 'package:seller/db/hive_prefs.dart';
-import 'package:seller/db/user_db/user_db_sqlite.dart';
+import 'package:sqflite/sqflite.dart';
+import '../../db/user_sqlite.dart';
 import 'package:seller/models/user.dart';
 import 'package:seller/utilities/phone_number_handler.dart';
 import 'package:seller/utilities/sms_verification.dart';
@@ -77,7 +78,8 @@ class SignUpController {
       //
       bool result = await UserAPI().addUser(user);
       if (result) {
-        UserSqlDB(await Sqlite().initDatabase())
+        Database sqlite = await Sqlite().initDatabase();
+        UserDB(sqlite)
             .addUser(user)
             .then((bool successful) {
           if (successful) {
@@ -87,6 +89,7 @@ class SignUpController {
           } else {
             showSnackBar("errorAddingUser");
           }
+          sqlite.close();
         });
       }else{
         showSnackBar("errorAddingUser");

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:seller/pages/login/forgot_fragment_c.dart';
-import 'package:seller/pages/login/logo_bar.dart';
+import '../../widgets/logo_bar.dart';
 import 'package:seller/widgets/button_main.dart';
 import 'package:seller/widgets/clickable_text.dart';
 import 'package:seller/widgets/home_wrapper.dart';

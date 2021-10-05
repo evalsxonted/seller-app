@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:seller/pages/start/material_app_props_controller.dart';
-import 'package:seller/pages/welcome/lanugae_buttons_c.dart';
+import 'lanugae_buttons_c.dart';
 import 'package:seller/utilities/locale_provider.dart';
 import 'package:seller/widgets/home_wrapper.dart';
 
@@ -71,6 +71,7 @@ class LanguageButtons extends StatelessWidget {
           return Container(
             margin: EdgeInsets.only(
               left: 10,
+              right: 10
             ),
             child: InkWell(
               onTap: () {
@@ -78,16 +79,16 @@ class LanguageButtons extends StatelessWidget {
               },
               child: Row(
                 children: [
-                  Icon(
-                    Icons.language_outlined,
-                    color: homeInherited.ui.iconColor,
+                  Text(
+                    homeInherited.languages.getText("language"),
+                    style: homeInherited.ui.normalTextStyle,
                   ),
                   SizedBox(
                     width: 5,
                   ),
-                  Text(
-                    homeInherited.languages.getText("language"),
-                    style: homeInherited.ui.normalTextStyle,
+                  Icon(
+                    Icons.language_outlined,
+                    color: homeInherited.ui.iconColor,
                   ),
                 ],
               ),

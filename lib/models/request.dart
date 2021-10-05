@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:seller/models/product.dart';
 
 class RequestInfo {
+  int? id;
   int? userPhone;
   String? province;
   String? location;
@@ -14,8 +15,11 @@ class RequestInfo {
   List<ProductInfo> selectedProducts;
   DateTime? requestTime;
 
+
   RequestInfo(
-      {required this.userPhone,
+      {
+        this.id,
+        required this.userPhone,
       this.province,
       this.location,
       this.receiverName,
@@ -28,6 +32,7 @@ class RequestInfo {
 
   static RequestInfo fromMap(Map info) {
     return RequestInfo(
+      id: info["id"],
       userPhone: info["userPhone"],
       selectedProducts: ProductInfo.fromMapList(info["selectedProducts"]),
       province: info["province"],
@@ -35,8 +40,8 @@ class RequestInfo {
       deliveryPrice: info["deliveryPrice"],
       productsPrice: info["productsPrice"],
       receiverName: info["receiverName"],
-      receiverPhone: info["receiverPhone"],
-      requestTime: info["requestTime"],
+      receiverPhone: info["receiverPhone"].toString(),
+      requestTime: DateTime.parse(info["requestTime"]),
       totalPrice: info["totalPrice"],
     );
   }

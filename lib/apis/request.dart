@@ -4,7 +4,7 @@ import 'package:seller/models/request.dart';
 class RequestAPI{
   static String getRequestsApi = "assets/json/requests.json";
   static String addRequestApi = "example.com/add/";
-  Future<List<RequestInfo>?> getRequests(int userPhone) async {
+  Future<List<RequestInfo>> getRequests(int userPhone) async {
     // Uri url = Uri.parse(getRequestsApi+ "/$userPhone");
     // http.Response response = await http.get(url);
     // ResponseHandler responseHandler = ResponseHandler(response);

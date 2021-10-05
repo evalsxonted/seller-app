@@ -107,6 +107,25 @@ class Languages {
     "totalPrice": "السعر الكلي",
     "confirmBuying": "تاكيد الشراء",
     "requestedSuccessfully": "تم الطلب بنجاح",
+    "emptySelectedProducts": "لم يتم اختيار منتجات",
+    //account screen
+    "accountSetting": "اعدادات الحساب",
+    // exist "province": "",
+    "logout": "تسجيل خروج",
+    "saveChanges": "حفظ التغييرات",
+    "updatedSuccessfully": "تم حفظ التغييرات",
+    //about screen
+    //exist "aboutUs": "about us",
+    "email": "example@example.com",
+    "aboutMessage": "نحن فريق عمل تطبيق مول العراق نسعى لتوفير افضل المنتجات بارخص الاسعار"
+        " ومن ارقى المناشئ. نستلم الطلبات من المستخدمين ثم نقوم"
+        " بشرائها وشحهنا الى العراق ثم توصيلها الى المستخدم."
+        " نسعد بالتعامل معكم ونسعى دائما لتوفير الافضل لكم."
+        " للشكاوى والمقترحات والاعلانات يرجى مراسلتنا على الايميل التالي ",
+    //requests screen
+    //exist "myRequests": "",
+    "emptyRequests": "لا توجد طلبات",
+    "orderId":"order id",
 
   };
   static Map<String, String> _englishLanguage = {
@@ -212,6 +231,24 @@ class Languages {
     "totalPrice": "total price",
     "confirmBuying": "confirm buying",
     "requestedSuccessfully": "requested successfully",
+    "emptySelectedProducts": "no products was selected",
+    //account screen
+    "accountSetting": "account setting",
+    // exist "province": "",
+    "logout": "logout",
+    "saveChanges": "save changes",
+    "updatedSuccessfully": "updated successfully",
+    //about screen
+    //exist "aboutUs": "about us",
+    "email": "example@example.com",
+    "aboutMessage": "We are the IraqMall application team, We work to provide the best products at the cheapest prices and from the finest producers."
+        " We receive orders from users, then buy them, ship them to Iraq, and then deliver them to the user."
+        "We are happy to deal with you and always strive to provide the best for you. For complaints, suggestions and advertising, please email us at the following email",
+    //requests screen
+    //exist "myRequests": "",
+    "emptyRequests": "no requests available",
+    "orderId":"رقم الطلب",
+
 
   };
 

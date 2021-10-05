@@ -5,7 +5,7 @@ import 'package:seller/widgets/clickable_text.dart';
 import 'package:seller/widgets/home_wrapper.dart';
 import 'package:seller/widgets/input.dart';
 import 'login_input.dart';
-import 'logo_bar.dart';
+import '../../widgets/logo_bar.dart';
 
 class SignUpFragment extends StatefulWidget {
   @override

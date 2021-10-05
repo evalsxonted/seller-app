@@ -46,7 +46,8 @@ class ProductInfo {
     return fromMapList(productsList);
   }
   static List<ProductInfo> fromMapList(List mapList){
-    return List.generate(mapList.length, (index) => fromMap(mapList[index]));
+    List<ProductInfo> list = List.generate(mapList.length, (index) => fromMap(mapList[index]));
+    return list;
   }
   static ProductInfo fromSqlMap(Map<String,dynamic> productInfo){
 

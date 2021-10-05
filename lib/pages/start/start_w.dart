@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:seller/pages/about/about.dart';
+import 'package:seller/pages/account/account_w.dart';
 import 'package:seller/pages/cart/cart_w.dart';
 import 'package:seller/pages/central/central_w.dart';
 import 'package:seller/pages/customer_service/customer_service_w.dart';
 import 'package:seller/pages/login/login_w.dart';
+import 'package:seller/pages/requests/requests_w.dart';
 import 'package:seller/pages/start/material_app_props_controller.dart';
 import 'package:seller/pages/welcome/welcome_w.dart';
 import '../../db/hive_prefs.dart';
@@ -41,6 +44,15 @@ class Start extends StatelessWidget {
             ),
             '/cart': (context) => HomeWrapper(
               child: Cart(),
+            ),
+            '/account': (context) => HomeWrapper(
+              child: Account(),
+            ),
+            '/about': (context) => HomeWrapper(
+              child: AboutUs(),
+            ),
+            '/requests': (context) => HomeWrapper(
+              child: MyRequests(),
             ),
 
           },

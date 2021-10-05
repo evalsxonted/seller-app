@@ -1,0 +1,88 @@
+[
+  {
+    "id": 45673897,
+    "userPhone": 7803258888,
+    "province": "Baghdad",
+    "location": "karrada",
+    "receiverName": "ali",
+    "receiverPhone": 7808080808,
+    "deliveryPrice": 5.0,
+    "productsPrice": 180.0,
+    "totalPrice": 185.5,
+    "selectedProducts": [
+      {
+        "id": "id56892",
+        "title": "Jeans",
+        "brand": "Nike",
+        "store": "Shorja",
+        "category": "menClothes",
+        "subCategory": "jeans",
+        "refLink": "https://www.trendyol.com/newtime/erkek-jeans-skinny-fit-likrali-p-64608593",
+        "desc": "typical jeans",
+        "price": 90.0,
+        "oldPrice": 120.0,
+        "images": ["https://cdn.dsmcdn.com/ty136/product/media/images/20210628/12/104884018/114060089/1/1_org_zoom.jpg",
+          "https://cdn.dsmcdn.com/ty136/product/media/images/20210628/12/104884018/114060089/2/2_org_zoom.jpg"
+        ],
+        "type": "clothes",
+        "divisions": [
+          "s",
+          "m",
+          "l",
+          "xl",
+          "xxl"
+        ],
+        "liked": false
+      },
+      {
+        "id": "id56891",
+        "title": "Jeans",
+        "brand": "Nike",
+        "store": "Shorja",
+        "category": "menClothes",
+        "subCategory": "jeans",
+        "refLink": "https://www.trendyol.com/newtime/erkek-jeans-skinny-fit-likrali-p-64608593",
+        "desc": "typical jeans",
+        "price": 80.0,
+        "oldPrice": 100.0,
+        "images": ["https://cdn.dsmcdn.com/ty136/product/media/images/20210628/12/104884018/114060089/1/1_org_zoom.jpg",
+          "https://cdn.dsmcdn.com/ty136/product/media/images/20210628/12/104884018/114060089/2/2_org_zoom.jpg"
+        ],
+        "type": "clothes",
+        "divisions": [
+          "s",
+          "m",
+          "l",
+          "xl",
+          "xxl"
+        ],
+        "liked": false
+      },
+      {
+        "id": "id56890",
+        "title": "Jeans",
+        "brand": "Nike",
+        "store": "Shorja",
+        "category": "menClothes",
+        "subCategory": "jeans",
+        "refLink": "https://www.trendyol.com/newtime/erkek-jeans-skinny-fit-likrali-p-64608593",
+        "desc": "typical jeans",
+        "price": 99.0,
+        "oldPrice": null,
+        "images": ["https://cdn.dsmcdn.com/ty136/product/media/images/20210628/12/104884018/114060089/1/1_org_zoom.jpg",
+          "https://cdn.dsmcdn.com/ty136/product/media/images/20210628/12/104884018/114060089/2/2_org_zoom.jpg"
+        ],
+        "type": "clothes",
+        "divisions": [
+          "s",
+          "m",
+          "l",
+          "xl",
+          "xxl"
+        ],
+        "liked": true
+      }
+    ],
+    "requestTime": "2012-04-23T18:24:43.511Z"
+  }
+]

@@ -1,12 +1,12 @@
 import 'dart:convert';
 
 class User {
-  final String device;
-  final String name;
-  final String password;
-  final String? province;
-  final String? location;
-  final String? language;
+  String device;
+  String name;
+  String password;
+  String? province;
+  String? location;
+  String? language;
   final int phone;
   final bool enabled;
 
@@ -27,6 +27,18 @@ class User {
       password: userInfo["password"],
       phone: userInfo["phone"],
       enabled: userInfo["enabled"],
+      language: userInfo["language"],
+      location: userInfo["location"],
+      province: userInfo["province"],
+    );
+  }
+  static User fromSqlMap(Map userInfo) {
+    return User(
+      device: userInfo["device"],
+      name: userInfo["name"],
+      password: userInfo["password"],
+      phone: userInfo["phone"],
+      enabled: userInfo["enabled"] == 1? true : false,
       language: userInfo["language"],
       location: userInfo["location"],
       province: userInfo["province"],

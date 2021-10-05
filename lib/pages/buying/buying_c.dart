@@ -91,6 +91,10 @@ class BuyingController {
   }
 
   buyAll() async {
+    if(requestInfo.selectedProducts.isEmpty){
+      showSnackBar("emptySelectedProducts");
+      return;
+    }
     buyingOverlay.setActive = true;
     requestInfo.receiverName = cName.text.trim();
     requestInfo.receiverPhone = cPhone.text.trim();

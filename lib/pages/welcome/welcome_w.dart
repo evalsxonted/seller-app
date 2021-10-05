@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:seller/pages/welcome/carousel.dart';
 import 'package:seller/widgets/home_wrapper.dart';
-import 'language_buttons_w.dart';
+import '../../widgets/language_buttons_w.dart';
 import 'welcome_c.dart';
 
 class WelcomeInherit extends InheritedWidget {
@@ -33,18 +33,18 @@ class Welcome extends StatelessWidget{
             backgroundColor: homeInherited.ui.bgColor,
             elevation: 0,
             leadingWidth: 200,
-            leading: LanguageButtons(),
-            actions: [
-              Container(
-                margin: EdgeInsets.only(left: 10, right: 10, top: 10),
-                child: InkWell(
-                  onTap: () => skipAction(context),
-                  child: Text(
-                    homeInherited.languages.getText("skip"),
-                    style: homeInherited.ui.bigTextStyle,
-                  ),
+            leading: Container(
+              margin: EdgeInsets.only(left: 10, right: 10, top: 10),
+              child: InkWell(
+                onTap: () => skipAction(context),
+                child: Text(
+                  homeInherited.languages.getText("skip"),
+                  style: homeInherited.ui.bigTextStyle,
                 ),
-              )
+              ),
+            ),
+            actions: [
+              LanguageButtons(),
             ],
           ),
           body: Padding(

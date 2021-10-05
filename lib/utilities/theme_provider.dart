@@ -52,6 +52,8 @@ class ThemeProvider{
       displayColor: Color(0xffF5FBFF),
     ),
   );
+  //this light theme is for test only now
+  //other themes will be added later
   static ThemeData lightTheme = ThemeData(
     primarySwatch: Colors.yellow,
     visualDensity: VisualDensity.adaptivePlatformDensity,

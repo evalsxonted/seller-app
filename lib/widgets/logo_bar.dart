@@ -11,7 +11,7 @@ class LogoBar extends StatelessWidget {
           left: homeInherited.ui.largePadding,
           top: homeInherited.ui.extraLargePadding,
           right: homeInherited.ui.largePadding,
-          bottom: homeInherited.ui.extraLargePadding),
+          bottom: homeInherited.ui.largePadding),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

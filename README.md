@@ -17,7 +17,7 @@ state management: fully implemented with InheritedWidget, ValueListenableBuilder
 state management package: none.<br/>
 files arhitecture: none.<br/>
 design pattern: singleton.<br/>
-design principle:  Single-responsibility principle.<br/>
+design principle in focus:  Single-responsibility principle.<br/>
 this app support the fowllowing:<br/>
   1- multi languages<br/>
   2- multi themes<br/>
